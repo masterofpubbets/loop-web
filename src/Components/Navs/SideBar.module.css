@@ -1,0 +1,38 @@
+.sideBar {
+    min-height: 100vh;
+    border-style: solid solid none none;
+    border-radius: 0 20px 0 0;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+.logo {
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    border-radius: 0 20px 0 0;
+}
+
+.logo img {
+    margin-top: -40px;
+    width: 96px;
+}
+
+.logo p {
+    font-size: calc(0.5em + 1vw);
+    font-weight: 400;
+}
+
+.downbox {
+    width: 30px;
+    background-color: #f0cb6b;
+    height: 13px;
+}
+
+.menuIcon {
+    cursor: pointer;
+}

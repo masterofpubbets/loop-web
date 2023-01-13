@@ -1,13 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(15px + 0.390625vw);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hind', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.startIcon {
+  margin-top: -5px !important;
+}
+
+
+#gridContainer {
+  height: 450px;
+}
+
+.dx-row img {
+  height: 100px;
+}
+
+
+
+.mouse-cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+#gridContainer {
+  height: 450px;
+}
+
+.dx-row img {
+  height: 100px;
+}
+
+#gridContainer tr.main-row td:not(:first-child) {
+  height: 21px;
+}
+
+#gridContainer tr.notes-row {
+  white-space: normal;
+  vertical-align: top;
+}
+
+#gridContainer tr.notes-row td {
+  height: 70px;
+  color: #999;
+}
+
+.dark #gridContainer tr.notes-row td {
+  color: #777;
+}
+
+#gridContainer tbody.dx-state-hover {
+  background-color: #ebebeb;
+}
+
+.dark #gridContainer tbody.dx-state-hover {
+  background-color: #484848;
+}
+
+#gridContainer tbody.dx-state-hover tr.main-row td {
+  color: #000;
+}
+
+.dark #gridContainer tbody.dx-state-hover tr.main-row td {
+  color: #ccc;
+}
+
+#gridContainer tbody.dx-state-hover tr.notes-row td {
+  color: #888;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.iconBreadLi {
+  list-style-type: '/';
+  display: flex;
+  gap: 15px;
 }

@@ -1,0 +1,103 @@
+.mainCard {
+    margin-top: 65px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65vh;
+    border-radius: 20px;
+    max-width: 517px;
+
+    
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    margin-top: 55px;
+    border-radius: 20px;
+}
+
+.title {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.title img {
+    width: 90px;
+    height: 59px;
+}
+
+.title p {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.subContent {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signupTextContainer {
+    margin-top: 25px;
+}
+
+.signupText {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.95rem;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.signupText span {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+    .mainCard {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .mainCard {
+        width: 85%;
+        height: 50vh;
+    }
+    .title p,
+    .signupText {
+        font-size: 0.7rem;
+    }
+    .subContent {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .mainCard {
+        width: 90%;
+        height: 50vh;
+    }
+    .title p,
+    .signupText {
+        font-size: 0.5rem;
+    }
+    .subContent {
+        width: 80%;
+    }
+}
+
+.bgColorBlack {
+    background-color: black;
+}
+.bgColorWhite {
+    background-color: white;
+}

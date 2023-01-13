@@ -1,17 +1,49 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './Components/App/App';
+import Layout from './Components/Layout/Layout';
+import { PreThemeProvider } from './Context/ThemeContext';
+import { UserProvider } from './Context/UserContext';
+import { NotificationsProvider } from './Context/NotificationsContext';
+import { WsProvider } from './Context/WSContext';
+import { ProductProvider } from './Context/ProductsContext';
+import { PBIProvider } from './Context/Products/PBIsContext';
+import { ProjectsProvider } from './Context/Projects/ProjectsContext';
+import { OtherUsersProvider } from './Context/OtherUsersContext';
+import { LoopFolderProvider } from './Context/Projects/LoopFolderContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <React.StrictMode >
+    <UserProvider>
+      <WsProvider>
+        <OtherUsersProvider>
+          <ProductProvider>
+            <ProjectsProvider>
+              <LoopFolderProvider>
+                <PBIProvider>
+                  <PreThemeProvider>
+                    <NotificationsProvider>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+                      <BrowserRouter>
+                        <Layout>
+                          <App />
+                        </Layout>
+                      </BrowserRouter>
+
+
+                    </NotificationsProvider>
+                  </PreThemeProvider>
+                </PBIProvider>
+              </LoopFolderProvider>
+            </ProjectsProvider>
+          </ProductProvider>
+        </OtherUsersProvider>
+      </WsProvider>
+    </UserProvider>
+  </React.StrictMode >
+);

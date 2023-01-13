@@ -1,0 +1,157 @@
+.container {
+    width: 100%;
+    display: grid;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto 4fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: '. google .' '. form .';
+}
+
+.googleContainer {
+    grid-area: google;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.formContainer {
+    grid-area: form;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.sidePanel {
+    grid-area: panel;
+    background-color: #1976D2;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 3px;
+    width: 85%;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.h6 {
+    margin-top: 10px !important;
+}
+
+.body2 {
+    margin-left: 10px !important;
+}
+
+@media screen and (max-width: 700px) {
+    .title p,
+    .signupText {
+        font-size: 0.7rem;
+    }
+    .container {
+        grid-template-areas: 'google google google' 'form form form';
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .sidePanel {
+        width: 65%;
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+    }
+    .formContainer {
+        height: 40vh;
+        width: 80%;
+    }
+    .googleContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .title p,
+    .signupText {
+        font-size: 0.5rem;
+    }
+    .container {
+        grid-template-areas: 'google google google' 'form form form';
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 12fr;
+        width: 100%;
+    }
+    .sidePanel {
+        width: 65%;
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+    }
+    .formContainer {
+        height: 60vh;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .formContainer {
+        height: 40vh;
+        width: 90%;
+    }
+    .googleContainer {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .formContainer {
+        width: 30%;
+    }
+    .googleContainer {
+        width: 30%;
+    }
+    .sidePanel {
+        width: 65%;
+        margin-right: 3px;
+    }
+    .formContainer {
+        height: 40vh;
+    }
+}
